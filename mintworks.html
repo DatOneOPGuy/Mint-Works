@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mint Works</title>
+    <link rel="stylesheet" href="mintworks.css">
+    <script src="mintworks.js" delay></script>
+  </head>
+  <body>
+    <div class="locations">
+      <div id="producerLocation" class="location">
+        <div class="placement">
+          <div class="occupied"></div>
+          <div class="available">1</div>
+          <div class="available">1</div>
+        </div>
+        <div class="name">Producer</div>
+        <div class="effect">Gain <span class="mint"></span><span class="mint"></span></div>
+      </div>
+      <div id="wholesalerLocation" class="location">
+        <div class="placement">
+          BUILD<br>DEED<br>TO<br>OPEN
+        </div>
+        <div class="name">Wholesaler</div>
+        <div class="effect">Gain <span class="mint"></span><span class="mint"></span>
+          <br>Owner Upkeep: If occupied, gain <span class="mint"></span>
+        </div>
+      </div>
+      <div id="builderLocation" class="location">
+        <div class="placement">
+          <div class="occupied"></div>
+          <div class="available">2</div>
+        </div>
+        <div class="name">Builder</div>
+        <div class="effect">Build one of your Plans</div>
+      </div>
+      <div id="passLocation" class="location">
+        <div class="name">
+          PASS
+        </div>
+      </div>
+      <div id="supplierLocation" class="location">
+        <div class="placement">
+          <div class="available">*</div>
+          <div class="available">*</div>
+        </div>
+        <div class="name">Supplier</div>
+        <div class="effect">Gain a Plan from the Plan Supply</div>
+      </div>
+      <div id="leadershipcouncilLocation" class="location">
+        <div class="placement">
+          <div class="available">1</div>
+        </div>
+        <div class="name">Leadership Council</div>
+        <div class="effect">Take the Starting Player Token and gain <span class="mint"></span></div>
+      </div>
+      <div id="lottoLocation" class="location">
+        <div class="placement">
+          <div class="available">3</div>
+        </div>
+        <div class="name">Lotto</div>
+        <div class="effect">
+          Gain the top Plan from the Plan Deck.<br>Owner Upkeep: 
+          If occupied, gain <span class="mint"></span><span class="mint"></span>
+        </div>
+      </div>
+    </div>
+    <div id="planSupply" class="plans">
+      <div class="plan">
+        <div class="name utility">Vault</div>
+        <div class="cost">
+          <span class="outline mint"></span><span class="outline mint"></span><span class="outline mint"></span><span class="outline mint"></span><span class="outline mint"></span>
+        </div>
+        <div class="effect utility"></div>
+        <div class="stars utility"><span class="outline star"></span><span class="outline star"></span> per Plan in your Neighborhood</div>
+        <div class="type"><span class="outline utility"></span></div>
+      </div>
+      <div class="plan">
+        <div class="name deed">Lotto</div>
+        <div class="cost">
+          <span class="outline mint"></span><span class="outline mint"></span><span class="outline mint"></span><span class="outline mint"></span>
+        </div>
+        <div class="effect deed">You are the Owner of the Lotto location.</div>
+        <div class="stars deed"><span class="outline star"></span><span class="outline star"></span></div>
+        <div class="type"><span class="outline deed"></span></div>
+      </div>  
+    </div>
+    <div class="deck"><div class="logo">Mint<br>Works</div></div>
+    <div class="players">
+      <div id="playerNeighborhood" class="player">
+        <div class="name">Player</div>
+        <div class="startToken"><span class="startToken"></span></div>
+        <div class="status">2<span class="star"></span><span class="mint"></span>4</div>
+        <div class="buildings">
+          <div id="Assembler" class="plan utility">Assembler</div>
+        </div>
+        <div class="buildings unconstructed">
+          <div id="Statue" class="plan culture">Statue</div>
+        </div>
+      </div>
+      <div id="aiNeighborhood" class="player">
+        <div class="name">Mort</div>
+        <div class="startToken"></div>
+        <div class="status">0<span class="star"></span><span class="mint"></span>5</div>
+        <div class="buildings">
+        </div>
+        <div class="buildings unconstructed">
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="popup"></div>
+  </body>
+</html>

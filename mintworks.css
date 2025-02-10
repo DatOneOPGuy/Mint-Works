@@ -1,0 +1,371 @@
+body {
+    /*test*/
+    display: grid;
+    grid-template-areas:
+    "locations supply deck"
+    "locations players players";
+    margin: 10px;
+    padding: 0;
+    font-family: Trebuchet MS, sans-serif; 
+    background-color: #f8f8f8;
+    max-width: 1200px;
+  }
+  
+  .locations {
+    grid-area: locations;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    gap: 5px 5px;
+  
+  
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  #passLocation {
+    grid-column: span 2;
+  
+    text-align: center;
+    width: 97%;
+    height: 25px;
+    display: block;
+  }
+  
+  
+  .location {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    grid-auto-rows: 27px;
+    column-gap: 10px;
+    row-gap: 5px;
+  
+  
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 16px;
+    background-color: #f3ebe0;
+    height: 125px;
+  }
+  
+  .location .placement {
+    grid-column: 1;
+    grid-row: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  
+    background-color: #9bb6ad;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+  }
+  .available {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 20px;
+    height: 20px;
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    font-weight: bold;
+    border: 2px dashed #fff;
+    margin: 5px 0;
+  }
+  .occupied {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    font-weight: bold;
+    border: 2px dashed #fff;
+    margin: 5px 0;
+  }
+  
+  
+  .location .name {
+    grid-column: 2;
+    grid-row: 1;
+  
+  
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #9bb6ad;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .location .effect {
+    grid-column: 2;
+    grid-row: 2 / 5;
+  
+    
+    padding: 10px;
+    font-size: 12px;
+    color: #333;
+    background-color: #9bb6ad;
+    margin: 5px 0px 0px 0px;
+    border-radius: 8px;
+  }      
+  
+  .plans {
+    grid-area: supply;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .plan {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+  
+  
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 16px;
+    background-color: #f3ebe0;
+    height: 230px;
+    width: 150px;
+  }
+  
+  .plan .name {
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;        
+  }
+  
+  .plan .cost {
+    text-align: center;
+    padding: 5px;
+    font-size: 80%;
+  }
+  
+  .plan .effect {
+    grid-row: 3 / 6;
+  
+  
+    font-size: 90%;
+    padding: 10px;
+    color: #333;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .plan .stars {
+    grid-row: 6;
+  
+  
+    padding: 10px;
+    font-size: 90%;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+  }
+  
+  .plan .type {
+    grid-row: 7;
+  
+  
+    text-align: center;
+    font-size: 125%;
+  }
+  
+  
+  
+  .players {
+    grid-area: players;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: -70px 0px 0px 0px;
+  }
+  
+  .players .player {
+    padding: 10px;
+    gap: 0px;
+    border: 3px solid #aaa;
+    border-radius: 16px;
+    height: 200px;
+    width: 255px;
+    background-color: #f3ebe0;
+  }
+  
+  .players .player .name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .players .player .buildings {
+
+  }
+  
+  .players .player .plan {
+    width: 90%;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2px;
+    height: 15px;
+  }
+  
+  .players .player .startToken {
+    text-align: center;
+  }
+  
+  .players .player .mints {
+    text-align: right;
+    font-size: 18px;
+  }
+  
+  .deck {
+    grid-area: deck;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 16px;
+    background-color: #9bb6ad;
+    color: #fff;
+    height: 230px;
+    width: 150px;
+    box-shadow: 10px 5px 5px #000;
+  }
+  
+  .deck .logo {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-text-stroke: 2px #282c2b;
+  }
+  
+  .unconstructed {
+    color: #fff;
+  }
+  .selectable {
+    cursor: pointer;
+    box-shadow: inset 0 0 0 4px rgb(255, 0, 0) !important; 
+  
+  }
+  .outline {
+    color: #fff;
+    text-shadow: 
+      -1px -1px 0 #666,
+      1px -1px 0 #666,
+      -1px 1px 0 #666,
+      1px 1px 0 #666; 
+  }
+  div.deed {
+    background-color: #9bb6ad;
+  }
+  div.culture {
+    background-color: #b3bf69;
+  }
+  div.production {
+    background-color: #de7971;
+  }
+  div.utility {
+    background-color: #efab56;
+  }
+  .missing {
+    background-color: #fff !important;
+    border: 2px dashed #000 !important;
+  }
+  
+  #popup {
+    float: left;
+    position: absolute;
+    visibility: hidden;
+    border: 3px dashed #000;
+    border-radius: 16px;
+  }
+  
+  .outline {
+    color: #fff;
+    text-shadow: 
+    -1px -1px 0 #666,
+    1px -1px 0 #666,
+    -1px 1px 0 #666,
+    1px 1px 0 #666; 
+  }
+  span.mint::after {
+    color: #fff;
+    text-shadow: 
+    -1px -1px 0 #666,
+    1px -1px 0 #666,
+    -1px 1px 0 #666,
+    1px 1px 0 #666; 
+    content: "\25c9";
+  }
+  span.star::after {
+    color: #fff;
+    text-shadow: 
+    -1px -1px 0 #666,
+    1px -1px 0 #666,
+    -1px 1px 0 #666,
+    1px 1px 0 #666; 
+    content: "\2605";
+  }
+  span.utility::after {
+    color: #fff;
+    text-shadow: 
+    -1px -1px 0 #666,
+    1px -1px 0 #666,
+    -1px 1px 0 #666,
+    1px 1px 0 #666; 
+    content: "\2692";
+  }
+  span.deed::after {
+    color: #fff;
+    text-shadow: 
+    -1px -1px 0 #666,
+    1px -1px 0 #666,
+    -1px 1px 0 #666,
+    1px 1px 0 #666; 
+    content: "\26ff";
+  }
+  span.production::after {
+    color: #fff;
+    text-shadow: 
+    -1px -1px 0 #666,
+    1px -1px 0 #666,
+    -1px 1px 0 #666,
+    1px 1px 0 #666; 
+    content: "\26ed";
+  }
+  span.culture::after {
+    color: #fff;
+    text-shadow: 
+    -1px -1px 0 #666,
+    1px -1px 0 #666,
+    -1px 1px 0 #666,
+    1px 1px 0 #666; 
+    content: "\2764";
+  }
+  span.startToken::after {
+    color: #fff;
+    text-shadow: 
+    -1px -1px 0 #666,
+    1px -1px 0 #666,
+    -1px 1px 0 #666,
+    1px 1px 0 #666; 
+    content: "\1f732";
+  }
