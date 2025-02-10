@@ -1,0 +1,75 @@
+body {
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.plan {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius:16px;
+    background-color: #f3ebe0;
+    height: 230px;
+    width: 150px;
+}
+
+.name{
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cost{
+    text-align: center;
+    padding: 5px;
+    font-size: 120%
+}
+
+.outline{
+    color: #fff;
+    text-shadow:
+    -1px -1px 0 #666,
+    1px -1px 0 #666,
+    -1px 1px 0 #666,
+    1px 1px 0 #666;
+}
+
+.effect{
+    height: 60px;
+    background-color: #efab56;
+    border-radius:10px 10px 0 0;
+    padding: 10px;
+    font-size: 90%;
+}
+
+.stars{
+    background-color: #efab56;
+    font-size: 80%;
+    border-radius: 0 0 10px 10px;
+    padding: 10px;
+}
+.type{
+    text-align: center;
+    font-size: 130%;
+}
+
+
+span.mint::after{
+    content: "\25c9";
+}
+
+span.utility::after{
+    content: "\2692";
+}
+
+span.star::after{
+    content: "\2605";
+}
+
+div.utility{
+    background-color: #efab56;
+}
+
+div.deed{
+    background-color: #9bb6ad;
+}
+
